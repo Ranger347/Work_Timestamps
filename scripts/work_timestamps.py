@@ -55,6 +55,6 @@ try:
     wage = float(input("How much are you paid per hour?\n"))
     total = wage * hours + wage * (minutes / 60)
 
-    print(f"Your resulting amount is ${total}")
+    print(f"Your resulting amount is: ${total}")
 except:
     pass
