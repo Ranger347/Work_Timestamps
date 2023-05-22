@@ -10,8 +10,8 @@ public class WorkTimestamps {
 			
 			int[] startTime = new int[]{Integer.parseInt(times[0].substring(0, 2)), Integer.parseInt(times[0].substring(2))};
 			int[] endTime = new int[]{Integer.parseInt(times[1].substring(0, 2)), Integer.parseInt(times[1].substring(2))};
-			System.out.println(startTime[0] + " " + startTime[1]);
-			System.out.println(endTime[0] + " " + endTime[1]);
+			// System.out.println(startTime[0] + " " + startTime[1]);
+			// System.out.println(endTime[0] + " " + endTime[1]);
 				
 			// (end_hours * 60 + end_minutes) - (start_hours * 60 + start_minutes)
 			return (endTime[0] * 60 + endTime[1]) - (startTime[0] * 60 + startTime[1]);
