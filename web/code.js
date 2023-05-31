@@ -46,12 +46,17 @@ const onWageSubmit = (event) => {
         let wage = parseFloat(document.getElementById("wage").value);
         let hoursWorked = parseInt(hoursAndMinutes.textContent.split(" ")[0])
         let minutesWorked = parseInt(hoursAndMinutes.textContent.split(" ")[3]);
+        let total = wage * hoursWorked + wage * (minutesWorked / 60) || 0;
         // console.log(wage);
         // console.log(hoursWorked);
         // console.log(minutesWorked);
+        // console.log(total);
 
-        let total = wage * hoursWorked + wage * (minutesWorked / 60);
-        total.equals(NaN) ? total_wage.textContent = `There was an error trying to calculate the total` : total_wage.textContent = `Your resulting amount is: $${total}`;
+        if (total == 0) {
+            total_wage.textContent = `There was an error trying to calculate the total`;
+        } else {
+            total_wage.textContent = `Your resulting amount is: $${total}`;
+        }
     } catch (error) {
         total_wage.textContent = `There was an error trying to calculate the total`;
     }
