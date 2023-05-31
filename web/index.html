@@ -7,11 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Timestamps</title>
     <link rel="stylesheet" href="style.css">
-    <script src="code.js"></script>
 </head>
 
 <body>
+    <h1>Work Timestamps Project</h1>
+    <p>
+        This website takes in times for each day and outputs the amount of time worked throughout the week.<br>
+        If you did not work on that day, do not input anything.<br>
+        Please enter times in military time in the format TTTT-TTTT.<br>
+    </p>
 
+    <form action="" id="times_form">
+        <p>Please input Sunday Times: <input type="text" class="ipt" id="sunday_times" placeholder="TTTT-TTTT"></p>
+        <p>Please input Monday Times: <input type="text" class="ipt" id="monday_times" placeholder="TTTT-TTTT"></p>
+        <p>Please input Tuesday Times: <input type="text" class="ipt" id="tuesday_times" placeholder="TTTT-TTTT"></p>
+        <p>Please input Wednesday Times: <input type="text" class="ipt" id="wednesday_times" placeholder="TTTT-TTTT"></p>
+        <p>Please input Thursday Times: <input type="text" class="ipt" id="thursday_times" placeholder="TTTT-TTTT"></p>
+        <p>Please input Friday Times: <input type="text" class="ipt" id="friday_times" placeholder="TTTT-TTTT"></p>
+        <p>Please input Saturday Times: <input type="text" class="ipt" id="saturday_times" placeholder="TTTT-TTTT"></p>
+        <div class="center"><input type="submit" value="Calculate Times" class="submit-button"></div>
+    </form>
+
+    <p id="total_times"></p>
+    <p id="hours_and_minutes"></p>
+    
+    <form action="" id="wage_form">
+        <p>Please input wage: <input type="text" class="ipt" id="wage" placeholder="$$"></p>
+        <div class="center"><input type="submit" value="Calculate Money Earned" class="submit-button"></div>
+    </form>
+
+    <p id="total_wage"></p>
+    
+    <script src="code.js"></script>
 </body>
+
 
 </html>
